@@ -3,9 +3,11 @@
 Spring Boot CRUD application for DevOps midterm.
 
 Student: Klim Fomin
+
 ## CRUD Feature
-Added Klim Fomin
+Added basic student CRUD operations
 Improved GET and POST endpoints
-Documentation updated
-Documentation updated
-Documentation updated by Klim Fomin - version B
+
+## Documentation
+Documentation updated - final version
+>>>>>>> feature/fomin-klim-documentation\
