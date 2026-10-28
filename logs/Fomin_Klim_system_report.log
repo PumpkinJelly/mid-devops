@@ -1,0 +1,30 @@
+==============================================
+       Student System Report
+==============================================
+Student:          Klim Fomin
+Date and Time:    2026-10-28 16:06:27
+Username:         ubuntu
+Operating System: Linux
+Kernel Version:   7.0.0-30-generic
+
+----- CPU Information -----
+CPU(s):                                  16
+On-line CPU(s) list:                     0-15
+Model name:                              Intel(R) Core(TM) i5-14400F
+Thread(s) per core:                      2
+Core(s) per socket:                      10
+CPU(s) scaling MHz:                      21%
+NUMA node0 CPU(s):                       0-15
+
+----- Memory Information -----
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       3.8Gi        17Gi       548Mi       9.6Gi        27Gi
+Swap:             0B          0B          0B
+
+----- Disk Usage -----
+Filesystem      Size  Used Avail Use% Mounted on
+/cow             16G  461M   16G   3% /
+
+----- Available Disk Space -----
+Available: 16G
+==============================================
