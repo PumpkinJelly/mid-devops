@@ -7,3 +7,4 @@ Student: Klim Fomin
 Added Klim Fomin
 Improved GET and POST endpoints
 Documentation updated by Klim Fomin - version A
+Documentation updated by Klim Fomin - version A
