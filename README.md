@@ -8,3 +8,4 @@ Added Klim Fomin
 Improved GET and POST endpoints
 Documentation updated
 Documentation updated
+Documentation updated by Klim Fomin - version B
