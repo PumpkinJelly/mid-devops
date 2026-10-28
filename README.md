@@ -6,3 +6,4 @@ Student: Klim Fomin
 ## CRUD Feature
 Added Klim Fomin
 Improved GET and POST endpoints
+Documentation updated by Klim Fomin - version A
