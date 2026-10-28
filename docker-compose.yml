@@ -1,0 +1,42 @@
+name: fomin-klim-2312
+
+services:
+  app:
+    build: .
+    image: fomin-klim-student-api:v1.0-fomin-klim
+    container_name: fomin-klim-app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/studentdb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - fomin-network
+
+  db:
+    image: postgres:15
+    container_name: fomin-klim-db
+    environment:
+      - POSTGRES_DB=studentdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - fomin-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - fomin-network
+
+volumes:
+  fomin-pgdata:
+
+networks:
+  fomin-network:
+    driver: bridge
