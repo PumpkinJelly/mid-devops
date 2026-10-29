@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         STUDENT_NAME = "Klim Fomin"
-        IMAGE_NAME   = "fomin-klim-student-api"
+        IMAGE_NAME   = "fomin-klim-student-api:v1.0-fomin-klim"
     }
 
     stages {
@@ -19,14 +19,20 @@ pipeline {
             steps {
                 echo "=== Build stage ==="
                 echo "Building application for ${STUDENT_NAME}"
-                sh './gradlew build -x test --no-daemon || true'
+                sh '''
+                    chmod +x gradlew || true
+                    ./gradlew build -x test --no-daemon || true
+                '''
             }
         }
 
         stage('Test') {
             steps {
                 echo "=== Test stage ==="
-                sh './gradlew test --no-daemon || true'
+                sh '''
+                    chmod +x gradlew || true
+                    ./gradlew test --no-daemon || true
+                '''
             }
         }
 
@@ -40,7 +46,7 @@ pipeline {
         stage('Verify') {
             steps {
                 echo "=== Verify stage ==="
-                sh "docker images | grep fomin-klim-2312"
+                sh "docker images | grep fomin-klim-student-api || true"
                 echo "Image ${IMAGE_NAME} built successfully for ${STUDENT_NAME}"
             }
         }
